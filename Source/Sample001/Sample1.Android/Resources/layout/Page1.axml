@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:l="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+    <TextView
+        android:text="Creation Count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+		<!-- 
+			To enable the 'l:Binding' attribute add 
+			the 'BindingAttributes.xml' file 
+			to your projects 'Resources/values' directory.
+			
+			PLEASE NOTE: A view with a binding requires an ID. 
+		-->
+    <TextView
+        l:Binding="Target=Text, Path=CreationCount"
+        android:id="@+id/Page1_TextView_ShownCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        l:Binding="Target=Click, Path=ShowDialogCommand"
+        android:id="@+id/Page1_Button_ShowDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Dialog" />
+    <Button
+        l:Binding="Target=Click, Path=PublishMessageCommand"
+        android:id="@+id/Page1_Button_PublishMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publish Message" />
+    <Button
+        l:Binding="Target=Click, Path=NavigateToPage2Command"
+        android:id="@+id/Page1_Button_NavigateToPage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navigate to Page 2" />
+	
+</LinearLayout>
