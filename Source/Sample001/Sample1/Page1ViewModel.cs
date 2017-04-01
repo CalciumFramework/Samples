@@ -46,14 +46,12 @@ namespace Sample1
 			INavigationService navigationService,
 			ISettingsService settingsService)
 	    {
-		    this.dialogService = dialogService;
-		    this.navigationService = navigationService;
-		    this.settingsService = settingsService;
-
-		    if (dialogService == null)
-		    {
-				throw new ArgumentNullException();
-		    }
+		    this.dialogService = dialogService 
+				?? throw new ArgumentNullException(nameof(dialogService));
+		    this.navigationService = navigationService 
+				?? throw new ArgumentNullException(nameof(navigationService));
+			this.settingsService = settingsService 
+				?? throw new ArgumentNullException(nameof(settingsService));
 
 			UpdateCreationCount();
 	    }
@@ -126,20 +124,26 @@ namespace Sample1
 			/* Use the settings service to retrieve, increment, 
 			 * and store a counter. 
 			 * The settings service is cross-platform. */
-			int previousCount = settingsService.GetSetting(key, 0);
-			settingsService.SetSetting(key, ++previousCount);
+			int count = settingsService.GetSetting(key, 0);
+			settingsService.SetSetting(key, ++count);
 
-			CreationCount = previousCount;
+			CreationCount = count;
 		}
 
-		/// <summary>
-		/// This property is set via the <see cref="UpdateCreationCount"/>
-		/// method. It reflects the value that is retrieved, incremented,
-		/// and stored via the settings service.
-		/// </summary>
-	    public int CreationCount { get; private set; }
+	    int creationCount;
 
-		string foo;
+	    /// <summary>
+	    /// This property is set via the <see cref="UpdateCreationCount"/>
+	    /// method. It reflects the value that is retrieved, incremented,
+	    /// and stored via the settings service.
+	    /// </summary>
+	    public int CreationCount
+	    {
+		    get => creationCount;
+		    private set => Set(ref creationCount, value);
+	    }
+
+	    string foo;
 
 		/// <summary>
 		/// This property demonstrates how to and raise 

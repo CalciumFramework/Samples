@@ -9,7 +9,7 @@ namespace Sample1
         public Page1()
         {
 			/* Using the Dependency class to resolve 
-			 * the view-model automatically causes it to recieve 
+			 * the view-model automatically causes it to receive 
 			 * the services it needs via dependency injection. */
 			DataContext = Dependency.Resolve<Page1ViewModel>();
 	        
