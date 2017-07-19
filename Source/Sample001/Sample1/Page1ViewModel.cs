@@ -116,9 +116,16 @@ namespace Sample1
 		void NavigateToPage2(object arg)
 	    {
 			navigationService.Navigate(Routes.Page2);
+
+			/* You can pass parameters by using the Navigate overload, like so: 
+			 * navigationService.Navigate(Routes.Page2, "Message from Page1ViewModel"); 
+			 * 
+			 * And then retrieve the value using: 
+			 * object argumentPassedFromPage1 = navigationService.NavigationArgument; 
+			 */
 		}
 
-	    void UpdateCreationCount()
+		void UpdateCreationCount()
 	    {
 			const string key = "Page1CreationCount";
 			/* Use the settings service to retrieve, increment, 

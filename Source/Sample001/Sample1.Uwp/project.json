@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "Codon.Uwp": "1.0.0",
+    "Codon.Uwp": "2.0.0-alpha",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
   },
   "frameworks": {

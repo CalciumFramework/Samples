@@ -31,7 +31,7 @@ namespace Sample1
 			routingService.RegisterPath(Routes.Page2, Navigate<Page2>);
 		}
 
-		void Navigate<TPage>()
+		void Navigate<TPage>(object arg)
 		{
 			Navigate(typeof(TPage));
 		}

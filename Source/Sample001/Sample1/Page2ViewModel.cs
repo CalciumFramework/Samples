@@ -20,6 +20,8 @@ namespace Sample1
 		public Page2ViewModel(INavigationService navigationService)
 		{
 			this.navigationService = navigationService;
+
+			//object argumentPassedFromPage1 = navigationService.NavigationArgument;
 		}
 
 		ActionCommand navigateBackCommand;

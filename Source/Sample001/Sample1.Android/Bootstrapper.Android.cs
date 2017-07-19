@@ -38,7 +38,7 @@ namespace Sample1
 			/* When the navigation service receives a request for "/Page2", 
 			 * it uses the routing service to look up the path 
 			 * and calls LaunchActivity<Page2Activity>(). */
-			routingService.RegisterPath(Routes.Page2, () => LaunchActivity<Page2Activity>(1));
+			routingService.RegisterPath(Routes.Page2, arg => LaunchActivity<Page2Activity>(1));
 		}
 
 		void LaunchActivity<TActivity>(int requestCode)
