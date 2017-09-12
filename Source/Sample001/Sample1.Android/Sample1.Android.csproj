@@ -45,19 +45,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Codon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e11023725666a3de, processorArchitecture=MSIL">
-      <HintPath>..\packages\Codon.2.0.6-alpha\lib\netstandard1.4\Codon.dll</HintPath>
+      <HintPath>..\packages\Codon.2.0.7-alpha\lib\netstandard1.4\Codon.dll</HintPath>
     </Reference>
     <Reference Include="Codon.Extras, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e11023725666a3de, processorArchitecture=MSIL">
-      <HintPath>..\packages\Codon.Extras.Core.2.0.6-alpha\lib\netstandard1.4\Codon.Extras.dll</HintPath>
+      <HintPath>..\packages\Codon.Extras.Core.2.0.7-alpha\lib\netstandard1.4\Codon.Extras.dll</HintPath>
     </Reference>
     <Reference Include="Codon.Extras.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Codon.Extras.Android.2.0.6-alpha\lib\MonoAndroid10\Codon.Extras.Platform.dll</HintPath>
+      <HintPath>..\packages\Codon.Extras.Android.2.0.7-alpha\lib\MonoAndroid10\Codon.Extras.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Codon.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Codon.Android.2.0.6-alpha\lib\MonoAndroid10\Codon.Platform.dll</HintPath>
+      <HintPath>..\packages\Codon.Android.2.0.7-alpha\lib\MonoAndroid10\Codon.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Codon.UI.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e11023725666a3de, processorArchitecture=MSIL">
-      <HintPath>..\packages\Codon.UI.Data.2.0.6-alpha\lib\netstandard1.4\Codon.UI.Data.dll</HintPath>
+      <HintPath>..\packages\Codon.UI.Data.2.0.7-alpha\lib\netstandard1.4\Codon.UI.Data.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
