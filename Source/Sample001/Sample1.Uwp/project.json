@@ -1,10 +1,10 @@
 ﻿{
   "dependencies": {
-    "Codon.Uwp": "2.0.0-alpha",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+    "Codon.Uwp": "2.0.6-alpha",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.14393": {}
   },
   "runtimes": {
     "win10-arm": {},
