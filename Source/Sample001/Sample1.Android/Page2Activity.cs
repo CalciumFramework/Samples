@@ -39,5 +39,12 @@ namespace Sample1
 			/* Disconnect the view from its view-model. */
 			applicator.RemoveBindings();
 		}
+
+		protected override void OnResume()
+		{
+			base.OnResume();
+
+			Dependency.Register<Activity>(this);
+		}
 	}
 }
