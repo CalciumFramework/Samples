@@ -33,9 +33,9 @@ namespace OptionsSample
 			if (item != null)
 			{
 				var readerWriter = (IUserOptionReaderWriter)item;
-				var template = readerWriter.UserOption.TemplateName;
+				var templateName = readerWriter.UserOption.TemplateName;
 
-				cache.TryGetValue(template, out NamedTemplate keyedTemplate);
+				cache.TryGetValue(templateName, out NamedTemplate keyedTemplate);
 				
 				if (keyedTemplate != null)
 				{

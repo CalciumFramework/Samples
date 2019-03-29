@@ -9,18 +9,18 @@
 	Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 	<Page.Resources>
-		<!--Use a collection view source for content that presents a list of items that can be grouped or sorted.-->
-		<CollectionViewSource x:Key="cvs" x:Name="cvs" IsSourceGrouped="True" Source="{x:Bind ViewModel.Groupings}" />
+		<CollectionViewSource x:Key="optionsViewSource"  
+			IsSourceGrouped="True" Source="{x:Bind ViewModel.Groupings}" />
 
 		<local:OptionTemplateSelector 
-			x:Key="optionsTemplateSelector" 
+			x:Key="optionTemplateSelector" 
 			Templates="{StaticResource OptionTemplateCollection}">
 		</local:OptionTemplateSelector>
 	</Page.Resources>
 
 	<Grid>
-		<ListView ItemsSource="{Binding Source={StaticResource cvs}}"
-				ItemTemplateSelector="{StaticResource optionsTemplateSelector}"
+		<ListView ItemsSource="{Binding Source={StaticResource optionsViewSource}}"
+				ItemTemplateSelector="{StaticResource optionTemplateSelector}"
 				SelectionMode="None">
 			<ListView.ItemContainerStyle>
 				<Style TargetType="ListViewItem">
