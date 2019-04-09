@@ -1,0 +1,16 @@
+﻿<Window x:Class="CommandBehaviorDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:c="clr-namespace:Codon.UI.Elements;assembly=Codon.Platform"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image Source="https://avatars1.githubusercontent.com/u/26504010?s=200" 
+               VerticalAlignment="Center" HorizontalAlignment="Center" Height="200" 
+               c:AttachedCommand.Command="{Binding ShowDialogCommand}" 
+               c:AttachedCommand.Event="MouseUp" />
+
+    </Grid>
+</Window>
